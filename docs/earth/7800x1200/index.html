@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CalculatedEarth</title>
+    <!--[if IE]>
+	<style type="text/css">
+		@import url(inc/style_ie.css);
+	</style>
+    <![endif]-->
+    <link rel="stylesheet" href="/inc/style.210203.css" crossorigin="anonymous" media="screen">
+	<meta name="description" content="CalculatedEarth. Maps and animations of global sea-level changes.">
+	<meta name="keywords" content="calculatedearth, calculated earth, sea level, global warming, co2, temperature, climate, environment, flood, economical, environmentally friendly, wind power, solar power">
+	<meta name="robots" content="index, follow">
+	<link rel="shortcut icon" href="/res/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/inc/gdpr-cookie-notice/style.css">
+</head>
+<body>
+
+<header>
+	<h1>
+		<a href="./">calculated<span style="color: #ffffff;">earth</span>.com</a><br />	</h1>
+	<ul>
+		<li><a href="/">home</a></li>
+		<li><a href="/about">about</a></li>
+		<li><a href="/links">links</a></li>
+		<li><a href="javascript:document.getElementById('payPalDonate').submit();">paypal donate</a></li>
+		<li><a title="Click to go back to main map..." href="/" class="buttonClose">back ^</a></li>
+	</ul>
+</header>
+
+<div id="streamWindowCustom" title="Mouse-over / click metre levels to view sea level change...">
+    <div id="streamWindowCustomMain">
+        <img id="streamWindowCustomBG" src="/res/sections/bg_jpg/GlobeColBig.jpg_7800x1200.jpg" />
+        <img id="streamWindowCustomTile" src="/res/sp.gif" style="border: 0; margin: 1px;" />
+        <div id="loading2">
+            <img src="/res/loading.gif" alt="Loading..." width="32" height="32" />Downloading media, please wait...
+        </div>
+    </div>
+    <div id="streamWindowCustomControl">
+        <h3><a title="Visual satellite image" alt="Visual satellite image" onmouseover="flip('/res/sp.gif', '0');" href="javascript:flip('/res/sp.gif', '0');">Sea level</a></h3>
+<a style="border-top: 1px solid #00ff00;" id="opt0m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00000m.raw.png', '0');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00000m.raw.png', '0');"><div class="swccd" style="background-color: #00ff00;"></div>0m</a>
+<a id="opt1m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00001m.raw.png', '1');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00001m.raw.png', '1');"><div class="swccd" style="background-color: #0cf200;"></div></a>
+<a id="opt2m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00002m.raw.png', '2');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00002m.raw.png', '2');"><div class="swccd" style="background-color: #19e500;"></div></a>
+<a id="opt3m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00003m.raw.png', '3');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00003m.raw.png', '3');"><div class="swccd" style="background-color: #26d800;"></div></a>
+<a id="opt4m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00004m.raw.png', '4');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00004m.raw.png', '4');"><div class="swccd" style="background-color: #33cc00;"></div></a>
+<a style="border-top: 1px solid #3fbf00;" id="opt5m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00005m.raw.png', '5');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00005m.raw.png', '5');"><div class="swccd" style="background-color: #3fbf00;"></div>5m</a>
+<a id="opt6m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00006m.raw.png', '6');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00006m.raw.png', '6');"><div class="swccd" style="background-color: #4cb200;"></div></a>
+<a id="opt7m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00007m.raw.png', '7');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00007m.raw.png', '7');"><div class="swccd" style="background-color: #59a500;"></div></a>
+<a id="opt8m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00008m.raw.png', '8');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00008m.raw.png', '8');"><div class="swccd" style="background-color: #669900;"></div></a>
+<a id="opt9m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00009m.raw.png', '9');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00009m.raw.png', '9');"><div class="swccd" style="background-color: #728c00;"></div></a>
+<a style="border-top: 1px solid #7f7f00;" id="opt10m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00010m.raw.png', '10');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00010m.raw.png', '10');"><div class="swccd" style="background-color: #7f7f00;"></div>10m</a>
+<a id="opt15m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00015m.raw.png', '15');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00015m.raw.png', '15');"><div class="swccd" style="background-color: #8c7200;"></div></a>
+<a id="opt20m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00020m.raw.png', '20');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00020m.raw.png', '20');"><div class="swccd" style="background-color: #996600;"></div></a>
+<a id="opt25m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00025m.raw.png', '25');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00025m.raw.png', '25');"><div class="swccd" style="background-color: #a55900;"></div></a>
+<a id="opt30m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00030m.raw.png', '30');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00030m.raw.png', '30');"><div class="swccd" style="background-color: #b24c00;"></div></a>
+<a id="opt35m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00035m.raw.png', '35');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00035m.raw.png', '35');"><div class="swccd" style="background-color: #bf3f00;"></div></a>
+<a id="opt40m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00040m.raw.png', '40');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00040m.raw.png', '40');"><div class="swccd" style="background-color: #cc3300;"></div></a>
+<a id="opt45m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00045m.raw.png', '45');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00045m.raw.png', '45');"><div class="swccd" style="background-color: #d82600;"></div></a>
+<a style="border-top: 1px solid #e51900;" id="opt50m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00050m.raw.png', '50');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00050m.raw.png', '50');"><div class="swccd" style="background-color: #e51900;"></div>50m</a>
+<a id="opt55m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00055m.raw.png', '55');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00055m.raw.png', '55');"><div class="swccd" style="background-color: #f20c00;"></div></a>
+<a id="opt60m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00060m.raw.png', '60');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00060m.raw.png', '60');"><div class="swccd" style="background-color: #ff0000;"></div></a>
+<a id="opt65m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00065m.raw.png', '65');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00065m.raw.png', '65');"><div class="swccd" style="background-color: #ff0000;"></div></a>
+<a id="opt70m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00070m.raw.png', '70');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00070m.raw.png', '70');"><div class="swccd" style="background-color: #f2000c;"></div></a>
+<a id="opt75m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00075m.raw.png', '75');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00075m.raw.png', '75');"><div class="swccd" style="background-color: #e50019;"></div></a>
+<a id="opt80m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00080m.raw.png', '80');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00080m.raw.png', '80');"><div class="swccd" style="background-color: #d80026;"></div></a>
+<a id="opt85m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00085m.raw.png', '85');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00085m.raw.png', '85');"><div class="swccd" style="background-color: #cc0033;"></div></a>
+<a id="opt90m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00090m.raw.png', '90');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00090m.raw.png', '90');"><div class="swccd" style="background-color: #bf003f;"></div></a>
+<a id="opt95m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00095m.raw.png', '95');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00095m.raw.png', '95');"><div class="swccd" style="background-color: #b2004c;"></div></a>
+<a style="border-top: 1px solid #a50059;" id="opt100m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00100m.raw.png', '100');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00100m.raw.png', '100');"><div class="swccd" style="background-color: #a50059;"></div>100m</a>
+<a id="opt105m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00105m.raw.png', '105');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00105m.raw.png', '105');"><div class="swccd" style="background-color: #990066;"></div></a>
+<a id="opt110m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00110m.raw.png', '110');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00110m.raw.png', '110');"><div class="swccd" style="background-color: #8c0072;"></div></a>
+<a id="opt115m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00115m.raw.png', '115');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00115m.raw.png', '115');"><div class="swccd" style="background-color: #7f007f;"></div></a>
+<a id="opt120m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00120m.raw.png', '120');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00120m.raw.png', '120');"><div class="swccd" style="background-color: #72008c;"></div></a>
+<a id="opt125m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00125m.raw.png', '125');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00125m.raw.png', '125');"><div class="swccd" style="background-color: #660099;"></div></a>
+<a id="opt130m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00130m.raw.png', '130');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00130m.raw.png', '130');"><div class="swccd" style="background-color: #5900a5;"></div></a>
+<a id="opt135m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00135m.raw.png', '135');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00135m.raw.png', '135');"><div class="swccd" style="background-color: #4c00b2;"></div></a>
+<a id="opt140m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00140m.raw.png', '140');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00140m.raw.png', '140');"><div class="swccd" style="background-color: #3f00bf;"></div></a>
+<a id="opt145m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00145m.raw.png', '145');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00145m.raw.png', '145');"><div class="swccd" style="background-color: #3300cc;"></div></a>
+<a style="border-top: 1px solid #2600d8;" id="opt150m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00150m.raw.png', '150');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00150m.raw.png', '150');"><div class="swccd" style="background-color: #2600d8;"></div>150m</a>
+<a id="opt155m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00155m.raw.png', '155');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00155m.raw.png', '155');"><div class="swccd" style="background-color: #1900e5;"></div></a>
+<a id="opt160m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00160m.raw.png', '160');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00160m.raw.png', '160');"><div class="swccd" style="background-color: #0c00f2;"></div></a>
+<a id="opt165m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00165m.raw.png', '165');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00165m.raw.png', '165');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt170m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00170m.raw.png', '170');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00170m.raw.png', '170');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt175m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00175m.raw.png', '175');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00175m.raw.png', '175');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt180m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00180m.raw.png', '180');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00180m.raw.png', '180');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt185m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00185m.raw.png', '185');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00185m.raw.png', '185');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt190m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00190m.raw.png', '190');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00190m.raw.png', '190');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt195m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00195m.raw.png', '195');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00195m.raw.png', '195');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a style="border-top: 1px solid #0000ff;" id="opt200m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00200m.raw.png', '200');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00200m.raw.png', '200');"><div class="swccd" style="background-color: #0000ff;"></div>200m</a>
+<a id="opt250m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00250m.raw.png', '250');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00250m.raw.png', '250');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt500m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00500m.raw.png', '500');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00500m.raw.png', '500');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt750m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__00750m.raw.png', '750');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__00750m.raw.png', '750');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a style="border-top: 1px solid #0000ff;" id="opt1000m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__01000m.raw.png', '1000');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__01000m.raw.png', '1000');"><div class="swccd" style="background-color: #0000ff;"></div>1000m</a>
+<a id="opt1250m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__01250m.raw.png', '1250');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__01250m.raw.png', '1250');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt1500m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__01500m.raw.png', '1500');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__01500m.raw.png', '1500');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt1750m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__01750m.raw.png', '1750');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__01750m.raw.png', '1750');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a style="border-top: 1px solid #0000ff;" id="opt2000m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__02000m.raw.png', '2000');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__02000m.raw.png', '2000');"><div class="swccd" style="background-color: #0000ff;"></div>2000m</a>
+<a id="opt2250m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__02250m.raw.png', '2250');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__02250m.raw.png', '2250');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt2500m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__02500m.raw.png', '2500');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__02500m.raw.png', '2500');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a id="opt2750m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__02750m.raw.png', '2750');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__02750m.raw.png', '2750');"><div class="swccd" style="background-color: #0000ff;"></div></a>
+<a style="border-top: 1px solid #0000ff;" id="opt3000m" onmouseover="flip('/res/sections/7800x1200/SeaLevel__03000m.raw.png', '3000');" href="javascript:flip('/src-static/res/sections/7800x1200/SeaLevel__03000m.raw.png', '3000');"><div class="swccd" style="background-color: #0000ff;"></div>3000m</a>
+    </div>
+    <div id="streamWindowCustomMiniMap">
+        <img src="/res/globe_thumb.jpg" />
+        <div id="noteData"><div id="noteLevel"></div><div id="noteLand"></div><div id="noteWater"></div></div>
+
+<a href="/earth/0x0" style="left: 0px; top: 0px;"></a>
+<a href="/earth/600x0" style="left: 15px; top: 0px;"></a>
+<a href="/earth/1200x0" style="left: 30px; top: 0px;"></a>
+<a href="/earth/1800x0" style="left: 45px; top: 0px;"></a>
+<a href="/earth/2400x0" style="left: 60px; top: 0px;"></a>
+<a href="/earth/3000x0" style="left: 75px; top: 0px;"></a>
+<a href="/earth/3600x0" style="left: 90px; top: 0px;"></a>
+<a href="/earth/4200x0" style="left: 105px; top: 0px;"></a>
+<a href="/earth/4800x0" style="left: 120px; top: 0px;"></a>
+<a href="/earth/5400x0" style="left: 135px; top: 0px;"></a>
+<a href="/earth/6000x0" style="left: 150px; top: 0px;"></a>
+<a href="/earth/6600x0" style="left: 165px; top: 0px;"></a>
+<a href="/earth/7200x0" style="left: 180px; top: 0px;"></a>
+<a href="/earth/7800x0" style="left: 195px; top: 0px;"></a>
+<a href="/earth/8400x0" style="left: 210px; top: 0px;"></a>
+<a href="/earth/9000x0" style="left: 225px; top: 0px;"></a>
+<a href="/earth/9600x0" style="left: 240px; top: 0px;"></a>
+<a href="/earth/10200x0" style="left: 255px; top: 0px;"></a>
+<a href="/earth/0x600" style="left: 0px; top: 15px;"></a>
+<a href="/earth/600x600" style="left: 15px; top: 15px;"></a>
+<a href="/earth/1200x600" style="left: 30px; top: 15px;"></a>
+<a href="/earth/1800x600" style="left: 45px; top: 15px;"></a>
+<a href="/earth/2400x600" style="left: 60px; top: 15px;"></a>
+<a href="/earth/3000x600" style="left: 75px; top: 15px;"></a>
+<a href="/earth/3600x600" style="left: 90px; top: 15px;"></a>
+<a href="/earth/4200x600" style="left: 105px; top: 15px;"></a>
+<a href="/earth/4800x600" style="left: 120px; top: 15px;"></a>
+<a href="/earth/5400x600" style="left: 135px; top: 15px;"></a>
+<a href="/earth/6000x600" style="left: 150px; top: 15px;"></a>
+<a href="/earth/6600x600" style="left: 165px; top: 15px;"></a>
+<a href="/earth/7200x600" style="left: 180px; top: 15px;"></a>
+<a href="/earth/7800x600" style="left: 195px; top: 15px;"></a>
+<a href="/earth/8400x600" style="left: 210px; top: 15px;"></a>
+<a href="/earth/9000x600" style="left: 225px; top: 15px;"></a>
+<a href="/earth/9600x600" style="left: 240px; top: 15px;"></a>
+<a href="/earth/10200x600" style="left: 255px; top: 15px;"></a>
+<a href="/earth/0x1200" style="left: 0px; top: 30px;"></a>
+<a href="/earth/600x1200" style="left: 15px; top: 30px;"></a>
+<a href="/earth/1200x1200" style="left: 30px; top: 30px;"></a>
+<a href="/earth/1800x1200" style="left: 45px; top: 30px;"></a>
+<a href="/earth/2400x1200" style="left: 60px; top: 30px;"></a>
+<a href="/earth/3000x1200" style="left: 75px; top: 30px;"></a>
+<a href="/earth/3600x1200" style="left: 90px; top: 30px;"></a>
+<a href="/earth/4200x1200" style="left: 105px; top: 30px;"></a>
+<a href="/earth/4800x1200" style="left: 120px; top: 30px;"></a>
+<a href="/earth/5400x1200" style="left: 135px; top: 30px;"></a>
+<a href="/earth/6000x1200" style="left: 150px; top: 30px;"></a>
+<a href="/earth/6600x1200" style="left: 165px; top: 30px;"></a>
+<a href="/earth/7200x1200" style="left: 180px; top: 30px;"></a>
+<a href="/earth/7800x1200" style="left: 195px; top: 30px;" class="on"></a>
+<a href="/earth/8400x1200" style="left: 210px; top: 30px;"></a>
+<a href="/earth/9000x1200" style="left: 225px; top: 30px;"></a>
+<a href="/earth/9600x1200" style="left: 240px; top: 30px;"></a>
+<a href="/earth/10200x1200" style="left: 255px; top: 30px;"></a>
+<a href="/earth/0x1800" style="left: 0px; top: 45px;"></a>
+<a href="/earth/600x1800" style="left: 15px; top: 45px;"></a>
+<a href="/earth/1200x1800" style="left: 30px; top: 45px;"></a>
+<a href="/earth/1800x1800" style="left: 45px; top: 45px;"></a>
+<a href="/earth/2400x1800" style="left: 60px; top: 45px;"></a>
+<a href="/earth/3000x1800" style="left: 75px; top: 45px;"></a>
+<a href="/earth/3600x1800" style="left: 90px; top: 45px;"></a>
+<a href="/earth/4200x1800" style="left: 105px; top: 45px;"></a>
+<a href="/earth/4800x1800" style="left: 120px; top: 45px;"></a>
+<a href="/earth/5400x1800" style="left: 135px; top: 45px;"></a>
+<a href="/earth/6000x1800" style="left: 150px; top: 45px;"></a>
+<a href="/earth/6600x1800" style="left: 165px; top: 45px;"></a>
+<a href="/earth/7200x1800" style="left: 180px; top: 45px;"></a>
+<a href="/earth/7800x1800" style="left: 195px; top: 45px;"></a>
+<a href="/earth/8400x1800" style="left: 210px; top: 45px;"></a>
+<a href="/earth/9000x1800" style="left: 225px; top: 45px;"></a>
+<a href="/earth/9600x1800" style="left: 240px; top: 45px;"></a>
+<a href="/earth/10200x1800" style="left: 255px; top: 45px;"></a>
+<a href="/earth/0x2400" style="left: 0px; top: 60px;"></a>
+<a href="/earth/600x2400" style="left: 15px; top: 60px;"></a>
+<a href="/earth/1200x2400" style="left: 30px; top: 60px;"></a>
+<a href="/earth/1800x2400" style="left: 45px; top: 60px;"></a>
+<a href="/earth/2400x2400" style="left: 60px; top: 60px;"></a>
+<a href="/earth/3000x2400" style="left: 75px; top: 60px;"></a>
+<a href="/earth/3600x2400" style="left: 90px; top: 60px;"></a>
+<a href="/earth/4200x2400" style="left: 105px; top: 60px;"></a>
+<a href="/earth/4800x2400" style="left: 120px; top: 60px;"></a>
+<a href="/earth/5400x2400" style="left: 135px; top: 60px;"></a>
+<a href="/earth/6000x2400" style="left: 150px; top: 60px;"></a>
+<a href="/earth/6600x2400" style="left: 165px; top: 60px;"></a>
+<a href="/earth/7200x2400" style="left: 180px; top: 60px;"></a>
+<a href="/earth/7800x2400" style="left: 195px; top: 60px;"></a>
+<a href="/earth/8400x2400" style="left: 210px; top: 60px;"></a>
+<a href="/earth/9000x2400" style="left: 225px; top: 60px;"></a>
+<a href="/earth/9600x2400" style="left: 240px; top: 60px;"></a>
+<a href="/earth/10200x2400" style="left: 255px; top: 60px;"></a>
+<a href="/earth/0x3000" style="left: 0px; top: 75px;"></a>
+<a href="/earth/600x3000" style="left: 15px; top: 75px;"></a>
+<a href="/earth/1200x3000" style="left: 30px; top: 75px;"></a>
+<a href="/earth/1800x3000" style="left: 45px; top: 75px;"></a>
+<a href="/earth/2400x3000" style="left: 60px; top: 75px;"></a>
+<a href="/earth/3000x3000" style="left: 75px; top: 75px;"></a>
+<a href="/earth/3600x3000" style="left: 90px; top: 75px;"></a>
+<a href="/earth/4200x3000" style="left: 105px; top: 75px;"></a>
+<a href="/earth/4800x3000" style="left: 120px; top: 75px;"></a>
+<a href="/earth/5400x3000" style="left: 135px; top: 75px;"></a>
+<a href="/earth/6000x3000" style="left: 150px; top: 75px;"></a>
+<a href="/earth/6600x3000" style="left: 165px; top: 75px;"></a>
+<a href="/earth/7200x3000" style="left: 180px; top: 75px;"></a>
+<a href="/earth/7800x3000" style="left: 195px; top: 75px;"></a>
+<a href="/earth/8400x3000" style="left: 210px; top: 75px;"></a>
+<a href="/earth/9000x3000" style="left: 225px; top: 75px;"></a>
+<a href="/earth/9600x3000" style="left: 240px; top: 75px;"></a>
+<a href="/earth/10200x3000" style="left: 255px; top: 75px;"></a>
+<a href="/earth/0x3600" style="left: 0px; top: 90px;"></a>
+<a href="/earth/600x3600" style="left: 15px; top: 90px;"></a>
+<a href="/earth/1200x3600" style="left: 30px; top: 90px;"></a>
+<a href="/earth/1800x3600" style="left: 45px; top: 90px;"></a>
+<a href="/earth/2400x3600" style="left: 60px; top: 90px;"></a>
+<a href="/earth/3000x3600" style="left: 75px; top: 90px;"></a>
+<a href="/earth/3600x3600" style="left: 90px; top: 90px;"></a>
+<a href="/earth/4200x3600" style="left: 105px; top: 90px;"></a>
+<a href="/earth/4800x3600" style="left: 120px; top: 90px;"></a>
+<a href="/earth/5400x3600" style="left: 135px; top: 90px;"></a>
+<a href="/earth/6000x3600" style="left: 150px; top: 90px;"></a>
+<a href="/earth/6600x3600" style="left: 165px; top: 90px;"></a>
+<a href="/earth/7200x3600" style="left: 180px; top: 90px;"></a>
+<a href="/earth/7800x3600" style="left: 195px; top: 90px;"></a>
+<a href="/earth/8400x3600" style="left: 210px; top: 90px;"></a>
+<a href="/earth/9000x3600" style="left: 225px; top: 90px;"></a>
+<a href="/earth/9600x3600" style="left: 240px; top: 90px;"></a>
+<a href="/earth/10200x3600" style="left: 255px; top: 90px;"></a>
+<a href="/earth/0x4200" style="left: 0px; top: 105px;"></a>
+<a href="/earth/600x4200" style="left: 15px; top: 105px;"></a>
+<a href="/earth/1200x4200" style="left: 30px; top: 105px;"></a>
+<a href="/earth/1800x4200" style="left: 45px; top: 105px;"></a>
+<a href="/earth/2400x4200" style="left: 60px; top: 105px;"></a>
+<a href="/earth/3000x4200" style="left: 75px; top: 105px;"></a>
+<a href="/earth/3600x4200" style="left: 90px; top: 105px;"></a>
+<a href="/earth/4200x4200" style="left: 105px; top: 105px;"></a>
+<a href="/earth/4800x4200" style="left: 120px; top: 105px;"></a>
+<a href="/earth/5400x4200" style="left: 135px; top: 105px;"></a>
+<a href="/earth/6000x4200" style="left: 150px; top: 105px;"></a>
+<a href="/earth/6600x4200" style="left: 165px; top: 105px;"></a>
+<a href="/earth/7200x4200" style="left: 180px; top: 105px;"></a>
+<a href="/earth/7800x4200" style="left: 195px; top: 105px;"></a>
+<a href="/earth/8400x4200" style="left: 210px; top: 105px;"></a>
+<a href="/earth/9000x4200" style="left: 225px; top: 105px;"></a>
+<a href="/earth/9600x4200" style="left: 240px; top: 105px;"></a>
+<a href="/earth/10200x4200" style="left: 255px; top: 105px;"></a>
+<a href="/earth/0x4800" style="left: 0px; top: 120px;"></a>
+<a href="/earth/600x4800" style="left: 15px; top: 120px;"></a>
+<a href="/earth/1200x4800" style="left: 30px; top: 120px;"></a>
+<a href="/earth/1800x4800" style="left: 45px; top: 120px;"></a>
+<a href="/earth/2400x4800" style="left: 60px; top: 120px;"></a>
+<a href="/earth/3000x4800" style="left: 75px; top: 120px;"></a>
+<a href="/earth/3600x4800" style="left: 90px; top: 120px;"></a>
+<a href="/earth/4200x4800" style="left: 105px; top: 120px;"></a>
+<a href="/earth/4800x4800" style="left: 120px; top: 120px;"></a>
+<a href="/earth/5400x4800" style="left: 135px; top: 120px;"></a>
+<a href="/earth/6000x4800" style="left: 150px; top: 120px;"></a>
+<a href="/earth/6600x4800" style="left: 165px; top: 120px;"></a>
+<a href="/earth/7200x4800" style="left: 180px; top: 120px;"></a>
+<a href="/earth/7800x4800" style="left: 195px; top: 120px;"></a>
+<a href="/earth/8400x4800" style="left: 210px; top: 120px;"></a>
+<a href="/earth/9000x4800" style="left: 225px; top: 120px;"></a>
+<a href="/earth/9600x4800" style="left: 240px; top: 120px;"></a>
+<a href="/earth/10200x4800" style="left: 255px; top: 120px;"></a>
+
+        <div id="adSense02">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- CA-200 -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:200px;height:200px"
+                data-ad-client="ca-pub-2077924195455717"
+                data-ad-slot="8534477763"></ins>
+            <script type="text/javascript">
+            document.addEventListener('gdprCookiesEnabled', function (e) {
+                if (e.detail.marketing) {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }
+            });
+            </script>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var customList = new Array();
+    var customListPreload = new Array();
+    var seaLevelData = new Array();
+
+    function renderPage() {
+
+customList['/res/sections/7800x1200/SeaLevel__00000m.raw.png'] = 'opt0m';
+customList['/res/sections/7800x1200/SeaLevel__00001m.raw.png'] = 'opt1m';
+customList['/res/sections/7800x1200/SeaLevel__00002m.raw.png'] = 'opt2m';
+customList['/res/sections/7800x1200/SeaLevel__00003m.raw.png'] = 'opt3m';
+customList['/res/sections/7800x1200/SeaLevel__00004m.raw.png'] = 'opt4m';
+customList['/res/sections/7800x1200/SeaLevel__00005m.raw.png'] = 'opt5m';
+customList['/res/sections/7800x1200/SeaLevel__00006m.raw.png'] = 'opt6m';
+customList['/res/sections/7800x1200/SeaLevel__00007m.raw.png'] = 'opt7m';
+customList['/res/sections/7800x1200/SeaLevel__00008m.raw.png'] = 'opt8m';
+customList['/res/sections/7800x1200/SeaLevel__00009m.raw.png'] = 'opt9m';
+customList['/res/sections/7800x1200/SeaLevel__00010m.raw.png'] = 'opt10m';
+customList['/res/sections/7800x1200/SeaLevel__00015m.raw.png'] = 'opt15m';
+customList['/res/sections/7800x1200/SeaLevel__00020m.raw.png'] = 'opt20m';
+customList['/res/sections/7800x1200/SeaLevel__00025m.raw.png'] = 'opt25m';
+customList['/res/sections/7800x1200/SeaLevel__00030m.raw.png'] = 'opt30m';
+customList['/res/sections/7800x1200/SeaLevel__00035m.raw.png'] = 'opt35m';
+customList['/res/sections/7800x1200/SeaLevel__00040m.raw.png'] = 'opt40m';
+customList['/res/sections/7800x1200/SeaLevel__00045m.raw.png'] = 'opt45m';
+customList['/res/sections/7800x1200/SeaLevel__00050m.raw.png'] = 'opt50m';
+customList['/res/sections/7800x1200/SeaLevel__00055m.raw.png'] = 'opt55m';
+customList['/res/sections/7800x1200/SeaLevel__00060m.raw.png'] = 'opt60m';
+customList['/res/sections/7800x1200/SeaLevel__00065m.raw.png'] = 'opt65m';
+customList['/res/sections/7800x1200/SeaLevel__00070m.raw.png'] = 'opt70m';
+customList['/res/sections/7800x1200/SeaLevel__00075m.raw.png'] = 'opt75m';
+customList['/res/sections/7800x1200/SeaLevel__00080m.raw.png'] = 'opt80m';
+customList['/res/sections/7800x1200/SeaLevel__00085m.raw.png'] = 'opt85m';
+customList['/res/sections/7800x1200/SeaLevel__00090m.raw.png'] = 'opt90m';
+customList['/res/sections/7800x1200/SeaLevel__00095m.raw.png'] = 'opt95m';
+customList['/res/sections/7800x1200/SeaLevel__00100m.raw.png'] = 'opt100m';
+customList['/res/sections/7800x1200/SeaLevel__00105m.raw.png'] = 'opt105m';
+customList['/res/sections/7800x1200/SeaLevel__00110m.raw.png'] = 'opt110m';
+customList['/res/sections/7800x1200/SeaLevel__00115m.raw.png'] = 'opt115m';
+customList['/res/sections/7800x1200/SeaLevel__00120m.raw.png'] = 'opt120m';
+customList['/res/sections/7800x1200/SeaLevel__00125m.raw.png'] = 'opt125m';
+customList['/res/sections/7800x1200/SeaLevel__00130m.raw.png'] = 'opt130m';
+customList['/res/sections/7800x1200/SeaLevel__00135m.raw.png'] = 'opt135m';
+customList['/res/sections/7800x1200/SeaLevel__00140m.raw.png'] = 'opt140m';
+customList['/res/sections/7800x1200/SeaLevel__00145m.raw.png'] = 'opt145m';
+customList['/res/sections/7800x1200/SeaLevel__00150m.raw.png'] = 'opt150m';
+customList['/res/sections/7800x1200/SeaLevel__00155m.raw.png'] = 'opt155m';
+customList['/res/sections/7800x1200/SeaLevel__00160m.raw.png'] = 'opt160m';
+customList['/res/sections/7800x1200/SeaLevel__00165m.raw.png'] = 'opt165m';
+customList['/res/sections/7800x1200/SeaLevel__00170m.raw.png'] = 'opt170m';
+customList['/res/sections/7800x1200/SeaLevel__00175m.raw.png'] = 'opt175m';
+customList['/res/sections/7800x1200/SeaLevel__00180m.raw.png'] = 'opt180m';
+customList['/res/sections/7800x1200/SeaLevel__00185m.raw.png'] = 'opt185m';
+customList['/res/sections/7800x1200/SeaLevel__00190m.raw.png'] = 'opt190m';
+customList['/res/sections/7800x1200/SeaLevel__00195m.raw.png'] = 'opt195m';
+customList['/res/sections/7800x1200/SeaLevel__00200m.raw.png'] = 'opt200m';
+customList['/res/sections/7800x1200/SeaLevel__00250m.raw.png'] = 'opt250m';
+customList['/res/sections/7800x1200/SeaLevel__00500m.raw.png'] = 'opt500m';
+customList['/res/sections/7800x1200/SeaLevel__00750m.raw.png'] = 'opt750m';
+customList['/res/sections/7800x1200/SeaLevel__01000m.raw.png'] = 'opt1000m';
+customList['/res/sections/7800x1200/SeaLevel__01250m.raw.png'] = 'opt1250m';
+customList['/res/sections/7800x1200/SeaLevel__01500m.raw.png'] = 'opt1500m';
+customList['/res/sections/7800x1200/SeaLevel__01750m.raw.png'] = 'opt1750m';
+customList['/res/sections/7800x1200/SeaLevel__02000m.raw.png'] = 'opt2000m';
+customList['/res/sections/7800x1200/SeaLevel__02250m.raw.png'] = 'opt2250m';
+customList['/res/sections/7800x1200/SeaLevel__02500m.raw.png'] = 'opt2500m';
+customList['/res/sections/7800x1200/SeaLevel__02750m.raw.png'] = 'opt2750m';
+customList['/res/sections/7800x1200/SeaLevel__03000m.raw.png'] = 'opt3000m';
+
+        for (var key in customList) {
+            customListPreload[customList[key]] = new Image();
+            customListPreload[customList[key]].src = key;
+        }
+        document.getElementById('loading2').style.display = 'block';
+        waitForImages();
+
+seaLevelData["0"] = new Array();
+seaLevelData["0"]["water"] = "0.10";
+seaLevelData["0"]["land"] = "99.90";
+seaLevelData["5"] = new Array();
+seaLevelData["5"]["water"] = "0.10";
+seaLevelData["5"]["land"] = "99.90";
+seaLevelData["10"] = new Array();
+seaLevelData["10"]["water"] = "0.10";
+seaLevelData["10"]["land"] = "99.90";
+seaLevelData["15"] = new Array();
+seaLevelData["15"]["water"] = "0.10";
+seaLevelData["15"]["land"] = "99.90";
+seaLevelData["20"] = new Array();
+seaLevelData["20"]["water"] = "0.10";
+seaLevelData["20"]["land"] = "99.90";
+seaLevelData["25"] = new Array();
+seaLevelData["25"]["water"] = "0.10";
+seaLevelData["25"]["land"] = "99.90";
+seaLevelData["30"] = new Array();
+seaLevelData["30"]["water"] = "0.10";
+seaLevelData["30"]["land"] = "99.90";
+seaLevelData["35"] = new Array();
+seaLevelData["35"]["water"] = "0.10";
+seaLevelData["35"]["land"] = "99.90";
+seaLevelData["40"] = new Array();
+seaLevelData["40"]["water"] = "0.11";
+seaLevelData["40"]["land"] = "99.89";
+seaLevelData["45"] = new Array();
+seaLevelData["45"]["water"] = "0.11";
+seaLevelData["45"]["land"] = "99.89";
+seaLevelData["50"] = new Array();
+seaLevelData["50"]["water"] = "0.11";
+seaLevelData["50"]["land"] = "99.89";
+seaLevelData["55"] = new Array();
+seaLevelData["55"]["water"] = "0.11";
+seaLevelData["55"]["land"] = "99.89";
+seaLevelData["60"] = new Array();
+seaLevelData["60"]["water"] = "0.11";
+seaLevelData["60"]["land"] = "99.89";
+seaLevelData["65"] = new Array();
+seaLevelData["65"]["water"] = "0.12";
+seaLevelData["65"]["land"] = "99.88";
+seaLevelData["70"] = new Array();
+seaLevelData["70"]["water"] = "0.12";
+seaLevelData["70"]["land"] = "99.88";
+seaLevelData["75"] = new Array();
+seaLevelData["75"]["water"] = "0.12";
+seaLevelData["75"]["land"] = "99.88";
+seaLevelData["80"] = new Array();
+seaLevelData["80"]["water"] = "0.12";
+seaLevelData["80"]["land"] = "99.88";
+seaLevelData["85"] = new Array();
+seaLevelData["85"]["water"] = "0.12";
+seaLevelData["85"]["land"] = "99.88";
+seaLevelData["90"] = new Array();
+seaLevelData["90"]["water"] = "0.13";
+seaLevelData["90"]["land"] = "99.87";
+seaLevelData["95"] = new Array();
+seaLevelData["95"]["water"] = "0.13";
+seaLevelData["95"]["land"] = "99.87";
+seaLevelData["100"] = new Array();
+seaLevelData["100"]["water"] = "0.13";
+seaLevelData["100"]["land"] = "99.87";
+seaLevelData["105"] = new Array();
+seaLevelData["105"]["water"] = "0.14";
+seaLevelData["105"]["land"] = "99.86";
+seaLevelData["110"] = new Array();
+seaLevelData["110"]["water"] = "0.14";
+seaLevelData["110"]["land"] = "99.86";
+seaLevelData["115"] = new Array();
+seaLevelData["115"]["water"] = "0.14";
+seaLevelData["115"]["land"] = "99.86";
+seaLevelData["120"] = new Array();
+seaLevelData["120"]["water"] = "0.14";
+seaLevelData["120"]["land"] = "99.86";
+seaLevelData["125"] = new Array();
+seaLevelData["125"]["water"] = "0.15";
+seaLevelData["125"]["land"] = "99.85";
+seaLevelData["130"] = new Array();
+seaLevelData["130"]["water"] = "0.15";
+seaLevelData["130"]["land"] = "99.85";
+seaLevelData["135"] = new Array();
+seaLevelData["135"]["water"] = "0.15";
+seaLevelData["135"]["land"] = "99.85";
+seaLevelData["140"] = new Array();
+seaLevelData["140"]["water"] = "0.16";
+seaLevelData["140"]["land"] = "99.84";
+seaLevelData["145"] = new Array();
+seaLevelData["145"]["water"] = "0.16";
+seaLevelData["145"]["land"] = "99.84";
+seaLevelData["150"] = new Array();
+seaLevelData["150"]["water"] = "0.16";
+seaLevelData["150"]["land"] = "99.84";
+seaLevelData["155"] = new Array();
+seaLevelData["155"]["water"] = "0.17";
+seaLevelData["155"]["land"] = "99.83";
+seaLevelData["160"] = new Array();
+seaLevelData["160"]["water"] = "0.17";
+seaLevelData["160"]["land"] = "99.83";
+seaLevelData["165"] = new Array();
+seaLevelData["165"]["water"] = "0.17";
+seaLevelData["165"]["land"] = "99.83";
+seaLevelData["170"] = new Array();
+seaLevelData["170"]["water"] = "0.19";
+seaLevelData["170"]["land"] = "99.81";
+seaLevelData["175"] = new Array();
+seaLevelData["175"]["water"] = "0.20";
+seaLevelData["175"]["land"] = "99.80";
+seaLevelData["180"] = new Array();
+seaLevelData["180"]["water"] = "0.20";
+seaLevelData["180"]["land"] = "99.80";
+seaLevelData["185"] = new Array();
+seaLevelData["185"]["water"] = "0.21";
+seaLevelData["185"]["land"] = "99.79";
+seaLevelData["190"] = new Array();
+seaLevelData["190"]["water"] = "0.22";
+seaLevelData["190"]["land"] = "99.78";
+seaLevelData["195"] = new Array();
+seaLevelData["195"]["water"] = "0.23";
+seaLevelData["195"]["land"] = "99.77";
+seaLevelData["200"] = new Array();
+seaLevelData["200"]["water"] = "0.25";
+seaLevelData["200"]["land"] = "99.75";
+seaLevelData["250"] = new Array();
+seaLevelData["250"]["water"] = "0.35";
+seaLevelData["250"]["land"] = "99.65";
+seaLevelData["500"] = new Array();
+seaLevelData["500"]["water"] = "4.54";
+seaLevelData["500"]["land"] = "95.46";
+seaLevelData["750"] = new Array();
+seaLevelData["750"]["water"] = "9.07";
+seaLevelData["750"]["land"] = "90.93";
+seaLevelData["1000"] = new Array();
+seaLevelData["1000"]["water"] = "18.15";
+seaLevelData["1000"]["land"] = "81.85";
+seaLevelData["1250"] = new Array();
+seaLevelData["1250"]["water"] = "28.52";
+seaLevelData["1250"]["land"] = "71.48";
+seaLevelData["1500"] = new Array();
+seaLevelData["1500"]["water"] = "35.88";
+seaLevelData["1500"]["land"] = "64.12";
+seaLevelData["1750"] = new Array();
+seaLevelData["1750"]["water"] = "41.17";
+seaLevelData["1750"]["land"] = "58.83";
+seaLevelData["2000"] = new Array();
+seaLevelData["2000"]["water"] = "45.74";
+seaLevelData["2000"]["land"] = "54.26";
+seaLevelData["2250"] = new Array();
+seaLevelData["2250"]["water"] = "49.26";
+seaLevelData["2250"]["land"] = "50.74";
+seaLevelData["2500"] = new Array();
+seaLevelData["2500"]["water"] = "52.10";
+seaLevelData["2500"]["land"] = "47.90";
+seaLevelData["2750"] = new Array();
+seaLevelData["2750"]["water"] = "55.57";
+seaLevelData["2750"]["land"] = "44.43";
+seaLevelData["3000"] = new Array();
+seaLevelData["3000"]["water"] = "58.44";
+seaLevelData["3000"]["land"] = "41.56";
+seaLevelData["1"] = new Array();
+seaLevelData["1"]["water"] = "0.10";
+seaLevelData["1"]["land"] = "99.90";
+seaLevelData["2"] = new Array();
+seaLevelData["2"]["water"] = "0.10";
+seaLevelData["2"]["land"] = "99.90";
+seaLevelData["3"] = new Array();
+seaLevelData["3"]["water"] = "0.10";
+seaLevelData["3"]["land"] = "99.90";
+seaLevelData["4"] = new Array();
+seaLevelData["4"]["water"] = "0.10";
+seaLevelData["4"]["land"] = "99.90";
+seaLevelData["6"] = new Array();
+seaLevelData["6"]["water"] = "0.10";
+seaLevelData["6"]["land"] = "99.90";
+seaLevelData["7"] = new Array();
+seaLevelData["7"]["water"] = "0.10";
+seaLevelData["7"]["land"] = "99.90";
+seaLevelData["8"] = new Array();
+seaLevelData["8"]["water"] = "0.10";
+seaLevelData["8"]["land"] = "99.90";
+seaLevelData["9"] = new Array();
+seaLevelData["9"]["water"] = "0.10";
+seaLevelData["9"]["land"] = "99.90";
+
+    }
+
+</script>
+
+
+
+<form id="payPalDonate" target="_blank" style="margin:0;padding:0;display:inline;" action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----"></form>
+<script src="/inc/script.210327.js" type="text/javascript" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/inc/gdpr-cookie-notice/script.js"></script>
+<script type="text/javascript">
+gdprCookieNotice({
+	locale: 'en',
+	timeout: 500,
+	expiration: 365,
+	domain: '.calculatedearth.com',
+	implicit: true,
+	statement: 'https://calculatedearth.com/about#cookies',
+	performance: ['JSESSIONID'],
+	analytics: ['ga'],
+	marketing: ['SSID']
+});
+
+// CA
+if (typeof renderPage === "function") {
+	renderPage();
+}
+
+// GA
+document.addEventListener('gdprCookiesEnabled', function (e) {
+	if (e.detail.analytics) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-60725872-1', 'auto');
+  ga('send', 'pageview');
+	}
+});	
+</script>
+
+</body>
+</html>

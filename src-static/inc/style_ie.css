@@ -1,0 +1,10 @@
+h1 {
+	font-size: 1.9em;
+}
+#contain a {
+	background-color: #ffffff; filter: alpha(opacity=01); -moz-opacity: 0.01; opacity: 0.01;
+}
+#streamWindowCustomMiniMap a {
+	background-color: #ffffff;
+	filter: alpha(opacity=01); -moz-opacity: 0.01; opacity: 0.01;
+}

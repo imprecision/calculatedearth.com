@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CalculatedEarth</title>
+    <!--[if IE]>
+	<style type="text/css">
+		@import url(inc/style_ie.css);
+	</style>
+    <![endif]-->
+    <link rel="stylesheet" href="/inc/style.210203.css" crossorigin="anonymous" media="screen">
+	<meta name="description" content="CalculatedEarth. Maps and animations of global sea-level changes.">
+	<meta name="keywords" content="calculatedearth, calculated earth, sea level, global warming, co2, temperature, climate, environment, flood, economical, environmentally friendly, wind power, solar power">
+	<meta name="robots" content="index, follow">
+	<link rel="shortcut icon" href="/res/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/inc/gdpr-cookie-notice/style.css">
+</head>
+<body>
+
+<header>
+	<h1>
+		<a href="./">calculated<span style="color: #ffffff;">earth</span>.com</a>	</h1>
+	<ul>
+		<li><a href="/">home</a></li>
+		<li><a href="/about">about</a></li>
+		<li><a href="/links">links</a></li>
+		<li><a href="javascript:document.getElementById('payPalDonate').submit();">paypal donate</a></li>
+	</ul>
+</header>
+
+<div id="tooltipBox"></div>
+
+<div id="window">
+    <div id="introText">
+        <a href="/">calculatedearth</a> shows what our planet looks like at differing sea levels.
+        <p>The first few metres can help visualise the potential effects of localised flooding and perhaps global warming. Above that, it's also a good way to visualise Earth's topography.</p>
+    </div>
+    <form id="introForm" name="control">
+        <div id="view">
+            <label for="view-va">View sea level at</label> <input type="text" name="view-val" id="view-val" onkeyup="switchStream();" value="100" title="Min -100m, max 2000m">m
+            <button type="button" onclick="switchStream();">View sea level &gt;</button>
+        </div>
+        <div id="sim">
+            <label for="sim-from">From</label> <input type="text" name="sim-from" id="sim-from" value="0" title="Min -100m">m
+            <label for="sim-to">to </label> <input type="text" name="sim-to" id="sim-to" value="200" title="Max 2000m">m
+            <button type="button" onclick="playStream();">Run simulation &gt;</button>
+        </div>
+    </form>
+    <div id="mapExtras">
+            <a href="/earth/eu" style="background-image:url(/res/eu_shadow.jpg);" onmouseover="setTxt('tooltipBox', 'Click to zoom into Europe and interact with at varying sea-levels.'); moveObject('tooltipBox', event);">
+                Europe
+            </a>
+            <a href="/earth/us" style="background-image:url(/res/us_shadow.jpg);" onmouseover="setTxt('tooltipBox', 'Click to zoom into North America and interact with at varying sea-levels.'); moveObject('tooltipBox', event);">
+                North America
+            </a>
+            <a href="/earth/ea" style="background-image:url(/res/ea_shadow.jpg);" onmouseover="setTxt('tooltipBox', 'Click to zoom into East Asia and interact with at varying sea-levels.'); moveObject('tooltipBox', event);">
+                East Asia
+            </a>
+        </div>
+    <div id="containWrapper">
+        <div id="contain" alt="Click a section to zoom in..." onmouseover="setTxt('tooltipBox', 'Click to zoom into area and interact with at varying sea-levels.'); moveObject('tooltipBox', event);">
+            <div id="loading">
+                <img src="/res/loading.gif" alt="Loading..." width="32" height="32">Downloading media, please wait...<span id="loadingCount"></span>
+            </div>
+            <img id="streamWindow" src="/res/globe/SeaLevel__00000m.raw.png" />
+
+<a href="/earth/0x0" style="left: 0px; top: 0px;"></a>
+<a href="/earth/600x0" style="left: 44px; top: 0px;"></a>
+<a href="/earth/1200x0" style="left: 89px; top: 0px;"></a>
+<a href="/earth/1800x0" style="left: 133px; top: 0px;"></a>
+<a href="/earth/2400x0" style="left: 178px; top: 0px;"></a>
+<a href="/earth/3000x0" style="left: 222px; top: 0px;"></a>
+<a href="/earth/3600x0" style="left: 267px; top: 0px;"></a>
+<a href="/earth/4200x0" style="left: 311px; top: 0px;"></a>
+<a href="/earth/4800x0" style="left: 356px; top: 0px;"></a>
+<a href="/earth/5400x0" style="left: 400px; top: 0px;"></a>
+<a href="/earth/6000x0" style="left: 444px; top: 0px;"></a>
+<a href="/earth/6600x0" style="left: 489px; top: 0px;"></a>
+<a href="/earth/7200x0" style="left: 533px; top: 0px;"></a>
+<a href="/earth/7800x0" style="left: 578px; top: 0px;"></a>
+<a href="/earth/8400x0" style="left: 622px; top: 0px;"></a>
+<a href="/earth/9000x0" style="left: 667px; top: 0px;"></a>
+<a href="/earth/9600x0" style="left: 711px; top: 0px;"></a>
+<a href="/earth/10200x0" style="left: 756px; top: 0px;"></a>
+<a href="/earth/0x600" style="left: 0px; top: 44px;"></a>
+<a href="/earth/600x600" style="left: 44px; top: 44px;"></a>
+<a href="/earth/1200x600" style="left: 89px; top: 44px;"></a>
+<a href="/earth/1800x600" style="left: 133px; top: 44px;"></a>
+<a href="/earth/2400x600" style="left: 178px; top: 44px;"></a>
+<a href="/earth/3000x600" style="left: 222px; top: 44px;"></a>
+<a href="/earth/3600x600" style="left: 267px; top: 44px;"></a>
+<a href="/earth/4200x600" style="left: 311px; top: 44px;"></a>
+<a href="/earth/4800x600" style="left: 356px; top: 44px;"></a>
+<a href="/earth/5400x600" style="left: 400px; top: 44px;"></a>
+<a href="/earth/6000x600" style="left: 444px; top: 44px;"></a>
+<a href="/earth/6600x600" style="left: 489px; top: 44px;"></a>
+<a href="/earth/7200x600" style="left: 533px; top: 44px;"></a>
+<a href="/earth/7800x600" style="left: 578px; top: 44px;"></a>
+<a href="/earth/8400x600" style="left: 622px; top: 44px;"></a>
+<a href="/earth/9000x600" style="left: 667px; top: 44px;"></a>
+<a href="/earth/9600x600" style="left: 711px; top: 44px;"></a>
+<a href="/earth/10200x600" style="left: 756px; top: 44px;"></a>
+<a href="/earth/0x1200" style="left: 0px; top: 89px;"></a>
+<a href="/earth/600x1200" style="left: 44px; top: 89px;"></a>
+<a href="/earth/1200x1200" style="left: 89px; top: 89px;"></a>
+<a href="/earth/1800x1200" style="left: 133px; top: 89px;"></a>
+<a href="/earth/2400x1200" style="left: 178px; top: 89px;"></a>
+<a href="/earth/3000x1200" style="left: 222px; top: 89px;"></a>
+<a href="/earth/3600x1200" style="left: 267px; top: 89px;"></a>
+<a href="/earth/4200x1200" style="left: 311px; top: 89px;"></a>
+<a href="/earth/4800x1200" style="left: 356px; top: 89px;"></a>
+<a href="/earth/5400x1200" style="left: 400px; top: 89px;"></a>
+<a href="/earth/6000x1200" style="left: 444px; top: 89px;"></a>
+<a href="/earth/6600x1200" style="left: 489px; top: 89px;"></a>
+<a href="/earth/7200x1200" style="left: 533px; top: 89px;"></a>
+<a href="/earth/7800x1200" style="left: 578px; top: 89px;"></a>
+<a href="/earth/8400x1200" style="left: 622px; top: 89px;"></a>
+<a href="/earth/9000x1200" style="left: 667px; top: 89px;"></a>
+<a href="/earth/9600x1200" style="left: 711px; top: 89px;"></a>
+<a href="/earth/10200x1200" style="left: 756px; top: 89px;"></a>
+<a href="/earth/0x1800" style="left: 0px; top: 133px;"></a>
+<a href="/earth/600x1800" style="left: 44px; top: 133px;"></a>
+<a href="/earth/1200x1800" style="left: 89px; top: 133px;"></a>
+<a href="/earth/1800x1800" style="left: 133px; top: 133px;"></a>
+<a href="/earth/2400x1800" style="left: 178px; top: 133px;"></a>
+<a href="/earth/3000x1800" style="left: 222px; top: 133px;"></a>
+<a href="/earth/3600x1800" style="left: 267px; top: 133px;"></a>
+<a href="/earth/4200x1800" style="left: 311px; top: 133px;"></a>
+<a href="/earth/4800x1800" style="left: 356px; top: 133px;"></a>
+<a href="/earth/5400x1800" style="left: 400px; top: 133px;"></a>
+<a href="/earth/6000x1800" style="left: 444px; top: 133px;"></a>
+<a href="/earth/6600x1800" style="left: 489px; top: 133px;"></a>
+<a href="/earth/7200x1800" style="left: 533px; top: 133px;"></a>
+<a href="/earth/7800x1800" style="left: 578px; top: 133px;"></a>
+<a href="/earth/8400x1800" style="left: 622px; top: 133px;"></a>
+<a href="/earth/9000x1800" style="left: 667px; top: 133px;"></a>
+<a href="/earth/9600x1800" style="left: 711px; top: 133px;"></a>
+<a href="/earth/10200x1800" style="left: 756px; top: 133px;"></a>
+<a href="/earth/0x2400" style="left: 0px; top: 178px;"></a>
+<a href="/earth/600x2400" style="left: 44px; top: 178px;"></a>
+<a href="/earth/1200x2400" style="left: 89px; top: 178px;"></a>
+<a href="/earth/1800x2400" style="left: 133px; top: 178px;"></a>
+<a href="/earth/2400x2400" style="left: 178px; top: 178px;"></a>
+<a href="/earth/3000x2400" style="left: 222px; top: 178px;"></a>
+<a href="/earth/3600x2400" style="left: 267px; top: 178px;"></a>
+<a href="/earth/4200x2400" style="left: 311px; top: 178px;"></a>
+<a href="/earth/4800x2400" style="left: 356px; top: 178px;"></a>
+<a href="/earth/5400x2400" style="left: 400px; top: 178px;"></a>
+<a href="/earth/6000x2400" style="left: 444px; top: 178px;"></a>
+<a href="/earth/6600x2400" style="left: 489px; top: 178px;"></a>
+<a href="/earth/7200x2400" style="left: 533px; top: 178px;"></a>
+<a href="/earth/7800x2400" style="left: 578px; top: 178px;"></a>
+<a href="/earth/8400x2400" style="left: 622px; top: 178px;"></a>
+<a href="/earth/9000x2400" style="left: 667px; top: 178px;"></a>
+<a href="/earth/9600x2400" style="left: 711px; top: 178px;"></a>
+<a href="/earth/10200x2400" style="left: 756px; top: 178px;"></a>
+<a href="/earth/0x3000" style="left: 0px; top: 222px;"></a>
+<a href="/earth/600x3000" style="left: 44px; top: 222px;"></a>
+<a href="/earth/1200x3000" style="left: 89px; top: 222px;"></a>
+<a href="/earth/1800x3000" style="left: 133px; top: 222px;"></a>
+<a href="/earth/2400x3000" style="left: 178px; top: 222px;"></a>
+<a href="/earth/3000x3000" style="left: 222px; top: 222px;"></a>
+<a href="/earth/3600x3000" style="left: 267px; top: 222px;"></a>
+<a href="/earth/4200x3000" style="left: 311px; top: 222px;"></a>
+<a href="/earth/4800x3000" style="left: 356px; top: 222px;"></a>
+<a href="/earth/5400x3000" style="left: 400px; top: 222px;"></a>
+<a href="/earth/6000x3000" style="left: 444px; top: 222px;"></a>
+<a href="/earth/6600x3000" style="left: 489px; top: 222px;"></a>
+<a href="/earth/7200x3000" style="left: 533px; top: 222px;"></a>
+<a href="/earth/7800x3000" style="left: 578px; top: 222px;"></a>
+<a href="/earth/8400x3000" style="left: 622px; top: 222px;"></a>
+<a href="/earth/9000x3000" style="left: 667px; top: 222px;"></a>
+<a href="/earth/9600x3000" style="left: 711px; top: 222px;"></a>
+<a href="/earth/10200x3000" style="left: 756px; top: 222px;"></a>
+<a href="/earth/0x3600" style="left: 0px; top: 267px;"></a>
+<a href="/earth/600x3600" style="left: 44px; top: 267px;"></a>
+<a href="/earth/1200x3600" style="left: 89px; top: 267px;"></a>
+<a href="/earth/1800x3600" style="left: 133px; top: 267px;"></a>
+<a href="/earth/2400x3600" style="left: 178px; top: 267px;"></a>
+<a href="/earth/3000x3600" style="left: 222px; top: 267px;"></a>
+<a href="/earth/3600x3600" style="left: 267px; top: 267px;"></a>
+<a href="/earth/4200x3600" style="left: 311px; top: 267px;"></a>
+<a href="/earth/4800x3600" style="left: 356px; top: 267px;"></a>
+<a href="/earth/5400x3600" style="left: 400px; top: 267px;"></a>
+<a href="/earth/6000x3600" style="left: 444px; top: 267px;"></a>
+<a href="/earth/6600x3600" style="left: 489px; top: 267px;"></a>
+<a href="/earth/7200x3600" style="left: 533px; top: 267px;"></a>
+<a href="/earth/7800x3600" style="left: 578px; top: 267px;"></a>
+<a href="/earth/8400x3600" style="left: 622px; top: 267px;"></a>
+<a href="/earth/9000x3600" style="left: 667px; top: 267px;"></a>
+<a href="/earth/9600x3600" style="left: 711px; top: 267px;"></a>
+<a href="/earth/10200x3600" style="left: 756px; top: 267px;"></a>
+<a href="/earth/0x4200" style="left: 0px; top: 311px;"></a>
+<a href="/earth/600x4200" style="left: 44px; top: 311px;"></a>
+<a href="/earth/1200x4200" style="left: 89px; top: 311px;"></a>
+<a href="/earth/1800x4200" style="left: 133px; top: 311px;"></a>
+<a href="/earth/2400x4200" style="left: 178px; top: 311px;"></a>
+<a href="/earth/3000x4200" style="left: 222px; top: 311px;"></a>
+<a href="/earth/3600x4200" style="left: 267px; top: 311px;"></a>
+<a href="/earth/4200x4200" style="left: 311px; top: 311px;"></a>
+<a href="/earth/4800x4200" style="left: 356px; top: 311px;"></a>
+<a href="/earth/5400x4200" style="left: 400px; top: 311px;"></a>
+<a href="/earth/6000x4200" style="left: 444px; top: 311px;"></a>
+<a href="/earth/6600x4200" style="left: 489px; top: 311px;"></a>
+<a href="/earth/7200x4200" style="left: 533px; top: 311px;"></a>
+<a href="/earth/7800x4200" style="left: 578px; top: 311px;"></a>
+<a href="/earth/8400x4200" style="left: 622px; top: 311px;"></a>
+<a href="/earth/9000x4200" style="left: 667px; top: 311px;"></a>
+<a href="/earth/9600x4200" style="left: 711px; top: 311px;"></a>
+<a href="/earth/10200x4200" style="left: 756px; top: 311px;"></a>
+<a href="/earth/0x4800" style="left: 0px; top: 356px;"></a>
+<a href="/earth/600x4800" style="left: 44px; top: 356px;"></a>
+<a href="/earth/1200x4800" style="left: 89px; top: 356px;"></a>
+<a href="/earth/1800x4800" style="left: 133px; top: 356px;"></a>
+<a href="/earth/2400x4800" style="left: 178px; top: 356px;"></a>
+<a href="/earth/3000x4800" style="left: 222px; top: 356px;"></a>
+<a href="/earth/3600x4800" style="left: 267px; top: 356px;"></a>
+<a href="/earth/4200x4800" style="left: 311px; top: 356px;"></a>
+<a href="/earth/4800x4800" style="left: 356px; top: 356px;"></a>
+<a href="/earth/5400x4800" style="left: 400px; top: 356px;"></a>
+<a href="/earth/6000x4800" style="left: 444px; top: 356px;"></a>
+<a href="/earth/6600x4800" style="left: 489px; top: 356px;"></a>
+<a href="/earth/7200x4800" style="left: 533px; top: 356px;"></a>
+<a href="/earth/7800x4800" style="left: 578px; top: 356px;"></a>
+<a href="/earth/8400x4800" style="left: 622px; top: 356px;"></a>
+<a href="/earth/9000x4800" style="left: 667px; top: 356px;"></a>
+<a href="/earth/9600x4800" style="left: 711px; top: 356px;"></a>
+<a href="/earth/10200x4800" style="left: 756px; top: 356px;"></a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="adSense01">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+		style="display:inline-block;width:728px;height:90px"
+		data-ad-client="ca-pub-2077924195455717"
+		data-ad-slot="5391038167"></ins>
+	<script type="text/javascript">
+	document.addEventListener('gdprCookiesEnabled', function (e) {
+		if (e.detail.marketing) {
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		}
+	});
+	</script>
+</div>
+
+
+<form id="payPalDonate" target="_blank" style="margin:0;padding:0;display:inline;" action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----"></form>
+<script src="/inc/script.210327.js" type="text/javascript" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/inc/gdpr-cookie-notice/script.js"></script>
+<script type="text/javascript">
+gdprCookieNotice({
+	locale: 'en',
+	timeout: 500,
+	expiration: 365,
+	domain: '.calculatedearth.com',
+	implicit: true,
+	statement: 'https://calculatedearth.com/about#cookies',
+	performance: ['JSESSIONID'],
+	analytics: ['ga'],
+	marketing: ['SSID']
+});
+
+// CA
+if (typeof renderPage === "function") {
+	renderPage();
+}
+
+// GA
+document.addEventListener('gdprCookiesEnabled', function (e) {
+	if (e.detail.analytics) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-60725872-1', 'auto');
+  ga('send', 'pageview');
+	}
+});	
+</script>
+
+</body>
+</html>

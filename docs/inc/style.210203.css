@@ -1,0 +1,319 @@
+body {
+	background-color: #020514;
+	background-image:url(/res/decoration/banner_top.jpg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	margin: 10px;
+	margin-top: 50px;
+}
+body, tr, th, td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	color: #ccc;
+}
+img {
+	border: 0px;
+}
+a {
+	color: #777777;
+	text-decoration: none;
+}
+h1 {
+	font-weight: normal; color: #777777; margin: 0;
+}
+header {
+	margin-bottom: 2em;
+}
+header>h1 {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+header>h1>small {
+	display: block;
+	color: #ffffff; font-size: 0.48em; font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.2em;
+}
+#introText {
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	color: #ffffff;
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.15em;
+	text-align: left;
+	font-weight: normal;
+}
+#introForm {
+	text-align: right;
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	display: inline-block;
+	padding-right: 2em;
+}
+input, button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	background-color: #f0f0f0;
+	border-left: 1px solid #777777;
+	border-top: 1px solid #cacaca;
+	border-right: 1px solid #cacaca;
+	border-bottom: 1px solid #777777;
+	color: #000000;
+}
+div#view,
+div#sim {
+	margin-bottom: 1em;
+	color: #aaa;
+}
+div#view button,
+div#sim button {
+	width: 12em;
+	text-align: right;
+	cursor: pointer;
+}
+div#view button:hover,
+div#sim button:hover {
+	color: #fff;
+	background-color: #777;
+	border-color: #777;
+}
+input#view-val,
+input#sim-from,
+input#sim-to {
+	width: 4em;
+	text-align: right;
+}
+#mapExtras {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#mapExtras a {
+	width:60px;
+	height:60px;
+	padding-left: 65px;
+	display: table-cell;
+	/* background-image:url(/res/eu_shadow.jpg); */
+	background-repeat: no-repeat;
+}
+#mapExtras img {
+	vertical-align: top;
+}
+#streamWindow {
+	background-image: url(/res/globe_main.jpg);
+	background-repeat: no-repeat;
+}
+#loading {
+	position: absolute;
+	width: 800px;
+	height: 400px;
+	background-color: #ffffff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	display: none;
+	color: #000;
+	z-index: 10;
+	text-align: left;
+	vertical-align: middle;
+}
+#containWrapper {
+	position: relative;
+}
+#contain a {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 44px;
+	height: 44px;
+	border: 0px none;
+	border-right: 1px dotted #444444;
+	border-bottom: 1px dotted #444444;
+	display: block;
+}
+#contain a:hover {
+	background-color: #ffffff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+#contain .on {
+	border-right: 2px dotted red; border-bottom: 2px dotted red; background-color: #ffffff; filter: alpha(opacity=60); -moz-opacity: 0.60; opacity: 0.60;
+}
+#loading img {
+	vertical-align: middle;
+	margin: 1em;
+}
+#contain {
+	position: relative;
+	border: 1px solid #ccc;
+	width: 800px;
+	height: 400px;
+	overflow: visible;
+	margin-bottom: 1em;
+}
+.buttonClose {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 2px solid #777777;
+	color: #777777;
+}
+.buttonClose:hover {
+	background-color: #777777;
+	color: #ffffff;
+}
+#streamWindowCustom {
+	overflow: visible;
+	margin: 0px;
+}
+#streamWindowCustomMain {
+	position: relative;
+	float: left;
+	width: 600px;
+	height: auto;
+	min-height: 400px; /* Culprit */
+}
+#streamWindowCustomMain img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	height: auto;
+	border: 1px solid #777;
+}
+#streamWindowCustomControl {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	width: auto;
+	height: auto;
+	width: 50px;
+	background-color:#ffffff;
+	color: #818181;
+	border: 1px solid #777777;
+	padding: 10px;
+	font-size: 0.85em;
+	margin-left: 5px;
+}
+#streamWindowCustomControl h3 {
+	margin: 0em 0em 1em 0em;
+	border-bottom: 1px solid #444;
+}
+#streamWindowCustomControl a {
+	display: block;
+	overflow: auto;
+	width: 100%;
+	clear: both;
+	text-decoration: none;
+}
+#streamWindowCustomControl a:hover {
+	color: #ffffff;
+	background-color: #777777;
+}
+.swccd {
+	position: relative; width: 10px; height: 4px; margin-bottom: 2px; float: left;
+}
+#streamWindowCustomMiniMap {
+	position: relative; float: right; 
+}
+#streamWindowCustomMiniMap img {
+	border: 1px solid #777777;
+}
+#streamWindowCustomMiniMap a {
+	position: absolute; width: 15px; height: 15px;
+}
+#streamWindowCustomMiniMap .on {
+	background-color: #ff0000;
+	filter: alpha(opacity=60); -moz-opacity: 0.60; opacity: 0.60;
+}
+#streamWindowCustomMiniMap a:hover {
+	background-color: #ffffff;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+#loading2 {
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 1em;
+	margin: 1em;
+	display: none;
+	text-align: left;
+	vertical-align: middle;
+	color: #818181;
+	z-index: 10;
+	border: 1px solid #777;
+	background-color: #ffffff;
+	filter: alpha(opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+}
+#loading2 img {
+	position: relative;
+	vertical-align: middle;
+	margin-right: 1em;
+	border: 0px;
+}
+
+header>ul {
+	padding: 0;
+	list-style-type: none;
+	clear: both;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 9px;
+}
+header>ul li { display: inline; }
+header>ul li a {
+	text-decoration: none;
+	padding: 0.1em 0.6em 0.2em 0.6em;
+	color: #fff;
+	border: 2px solid #444;
+}
+header>ul li a:hover {
+	color: #fff;
+	background-color: #777;
+}
+
+#about h1, #about h2 {
+	font-weight: normal;
+    color: #777777;
+    margin: 0;
+	font-size: 1.3em;
+	margin-top: 2em;
+}
+#about p {
+	padding: 0em 3em 0em 3em;
+}
+#about li {
+	margin-bottom: 1em;
+}
+#adSense01 {
+	position: relative;
+	clear: both;
+	top: 2em;
+}
+#adSense02 {
+	text-align: right;
+	margin-top: 1em;
+}
+#b3ta {
+	font-weight: normal; color: #7e98d3; font-size: 0.75em;
+}
+#tooltipBox {
+	position: absolute; background-color: #7e98d3; border: 1px solid #777777; color: #f0f0f0; font-weight: bold; opacity: 0; display: none; padding: 10px; margin: 10px; width: auto; height: auto; z-index: 101;
+}
+#noteData {
+	position: relative; width: 270px; min-width: 270px; font-weight: bold; font-size: 1.1em; text-align: right;
+	min-height: 8em;
+}
+#noteLevel {
+	color: #ffffff;
+}
+#noteLand {
+	color: #008800;
+}
+#noteWater {
+	color: #7e98d3;
+}

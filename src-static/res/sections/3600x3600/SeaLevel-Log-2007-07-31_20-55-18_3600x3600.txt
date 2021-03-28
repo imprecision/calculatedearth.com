@@ -1,0 +1,9 @@
+Sea level (m)	Points changed	Points total	Processing time (s)	Output filename	Water area (%)	Land area (%)	Errors (-)	Errors (+)
+1	316669	360001	8	SeaLevel__00001m.raw	87.96	12.04	1	0
+2	316669	360001	7.81	SeaLevel__00002m.raw	87.96	12.04	1	0
+3	318752	360001	8.07	SeaLevel__00003m.raw	88.54	11.46	1	0
+4	318752	360001	8.35	SeaLevel__00004m.raw	88.54	11.46	1	0
+6	320161	360001	7.87	SeaLevel__00006m.raw	88.93	11.07	1	0
+7	321269	360001	7.72	SeaLevel__00007m.raw	89.24	10.76	1	0
+8	321269	360001	7.63	SeaLevel__00008m.raw	89.24	10.76	1	0
+9	322231	360001	7.92	SeaLevel__00009m.raw	89.51	10.49	1	0
