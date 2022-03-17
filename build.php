@@ -41,7 +41,8 @@ l("Starting build process.");
 l("Runtime URL directory from root: " . CA_URL_ROOT);
 
 // Clear the build folder
-exec("rm -rf docs/*");
+exec("rm -rf docs");
+mkdir("docs", 0777, true);
 l("Build directory cleared.");
 
 // Copy static content
@@ -66,7 +67,7 @@ foreach ($files as $source => $target) {
     $target_info = pathinfo($target);
 
     if (!file_exists($target_info["dirname"])) {
-        mkdir($target_info["dirname"], 644, true);
+        mkdir($target_info["dirname"], 0777, true);
     }
     file_put_contents($target, $html);
 
@@ -93,7 +94,7 @@ foreach ($files as $source => $target) {
     $target_info = pathinfo($target);
 
     if (!file_exists($target_info["dirname"])) {
-        mkdir($target_info["dirname"], 644, true);
+        mkdir($target_info["dirname"], 0777, true);
     }
     file_put_contents($target, $html);
 
@@ -116,7 +117,7 @@ for ($r_y = 0; $r_y < 5400; $r_y = $r_y + 600) {
         $target_info = pathinfo($target);
     
         if (!file_exists($target_info["dirname"])) {
-            mkdir($target_info["dirname"], 644, true);
+            mkdir($target_info["dirname"], 0777, true);
         }
         file_put_contents($target, $html);
 

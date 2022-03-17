@@ -10,12 +10,11 @@
 		@import url(inc/style_ie.css);
 	</style>
     <![endif]-->
-    <link rel="stylesheet" href="<?=CA_URL_ROOT?>inc/style.210203.css" crossorigin="anonymous" media="screen">
+    <link rel="stylesheet" href="<?=CA_URL_ROOT?>inc/style.220317.css" crossorigin="anonymous" media="screen">
 	<meta name="description" content="CalculatedEarth. Maps and animations of global sea-level changes.">
 	<meta name="keywords" content="calculatedearth, calculated earth, sea level, global warming, co2, temperature, climate, environment, flood, economical, environmentally friendly, wind power, solar power">
 	<meta name="robots" content="index, follow">
 	<link rel="shortcut icon" href="<?=CA_URL_ROOT?>res/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="<?=CA_URL_ROOT?>inc/gdpr-cookie-notice/style.css">
 </head>
 <body>
 
@@ -27,7 +26,6 @@
 		<li><a href="<?=CA_URL_ROOT?>">home</a></li>
 		<li><a href="<?=CA_URL_ROOT?>about">about</a></li>
 		<li><a href="<?=CA_URL_ROOT?>links">links</a></li>
-		<li><a href="javascript:document.getElementById('payPalDonate').submit();">paypal donate</a></li>
 <?php
 if ($zoomed) {
 ?>

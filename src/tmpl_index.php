@@ -8,7 +8,7 @@ if (!$zoomed) {
 
 <div id="window">
     <div id="introText">
-        <a href="<?=CA_URL_ROOT?>">calculatedearth</a> shows what our planet looks like at differing sea levels.
+        <strong><a href="<?=CA_URL_ROOT?>">calculatedearth</a> shows what our planet looks like at differing sea levels.</strong>
         <p>The first few metres can help visualise the potential effects of localised flooding and perhaps global warming. Above that, it's also a good way to visualise Earth's topography.</p>
     </div>
     <form id="introForm" name="control">
@@ -143,22 +143,6 @@ if ($zoomed) {
         }
 
 ?>
-
-        <div id="adSense02">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- CA-200 -->
-            <ins class="adsbygoogle"
-                style="display:inline-block;width:200px;height:200px"
-                data-ad-client="ca-pub-2077924195455717"
-                data-ad-slot="8534477763"></ins>
-            <script type="text/javascript">
-            document.addEventListener('gdprCookiesEnabled', function (e) {
-                if (e.detail.marketing) {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                }
-            });
-            </script>
-        </div>
 
     </div>
 </div>

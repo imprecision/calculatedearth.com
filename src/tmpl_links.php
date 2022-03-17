@@ -10,10 +10,6 @@
             <br />Original concept &amp; research.
         </li>
         <li>
-            <b>Jonathan Matthew Burke</b>
-            <br />Design, coding &amp; implimentation.
-        </li>
-        <li>
             <a href="http://www.ngdc.noaa.gov/mgg/fliers/06mgg01.html" target="_blank">http://www.ngdc.noaa.gov/mgg/fliers/06mgg01.html</a>
             <br /><b>US National Geophysical Data Centre (NGDC)</b>
             <br />ETOPO2 bathymetry / topography data.
@@ -33,7 +29,7 @@
         <li>
             <a href="http://srtm.csi.cgiar.org target="_blank"">http://srtm.csi.cgiar.org</a>
             <br /><b>CGIAR-CSI SRTM 90m DEM Digital Elevation Database</b>
-            <br />Consortium for Spatial Information, information and downloads about SRTM
+            <br />Consortium for Spatial Information, information and downloads about SRTM.
         </li>
         <li>
             <a href="http://geodata.grid.unep.ch" target="_blank">http://geodata.grid.unep.ch</a>

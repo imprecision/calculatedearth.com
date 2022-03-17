@@ -7,8 +7,8 @@ body {
 	margin-top: 50px;
 }
 body, tr, th, td {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 0.7em;
+	font-family: Helvetica, sans-serif;
+	font-size: 0.9em;
 	color: #ccc;
 }
 img {
@@ -38,9 +38,11 @@ header>h1>small {
 	color: #ffffff;
 	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 0.15em;
 	text-align: left;
 	font-weight: normal;
+}
+#introText strong {
+	font-size: 1.2em;
 }
 #introForm {
 	text-align: right;
@@ -51,13 +53,14 @@ header>h1>small {
 }
 input, button {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1em;
+	font-size: 0.8em;
 	background-color: #f0f0f0;
 	border-left: 1px solid #777777;
 	border-top: 1px solid #cacaca;
 	border-right: 1px solid #cacaca;
 	border-bottom: 1px solid #777777;
 	color: #000000;
+	margin: 0 0.2em;
 }
 div#view,
 div#sim {
@@ -88,11 +91,10 @@ input#sim-to {
 }
 
 #mapExtras a {
-	width:60px;
-	height:60px;
+	width: 5em;
+	height: 60px;
 	padding-left: 65px;
 	display: table-cell;
-	/* background-image:url(/res/eu_shadow.jpg); */
 	background-repeat: no-repeat;
 }
 #mapExtras img {
@@ -267,7 +269,7 @@ header>ul {
 header>ul li { display: inline; }
 header>ul li a {
 	text-decoration: none;
-	padding: 0.1em 0.6em 0.2em 0.6em;
+	padding: 0.2em 0.6em 0.2em 0.6em;
 	color: #fff;
 	border: 2px solid #444;
 }
@@ -280,7 +282,7 @@ header>ul li a:hover {
 	font-weight: normal;
     color: #777777;
     margin: 0;
-	font-size: 1.3em;
+	font-size: 1.6em;
 	margin-top: 2em;
 }
 #about p {
@@ -288,18 +290,6 @@ header>ul li a:hover {
 }
 #about li {
 	margin-bottom: 1em;
-}
-#adSense01 {
-	position: relative;
-	clear: both;
-	top: 2em;
-}
-#adSense02 {
-	text-align: right;
-	margin-top: 1em;
-}
-#b3ta {
-	font-weight: normal; color: #7e98d3; font-size: 0.75em;
 }
 #tooltipBox {
 	position: absolute; background-color: #7e98d3; border: 1px solid #777777; color: #f0f0f0; font-weight: bold; opacity: 0; display: none; padding: 10px; margin: 10px; width: auto; height: auto; z-index: 101;

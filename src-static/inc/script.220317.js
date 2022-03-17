@@ -3,10 +3,12 @@
  */
 
 function flip(file, level) {
+	event.preventDefault();
 	document.getElementById('streamWindowCustomTile').src = file;
 	document.getElementById('noteLevel').innerHTML = 'Sea level <span style="font-size: 2em;">'+level+'m</span>';
 	document.getElementById('noteLand').innerHTML = seaLevelData[level]['land']+'% Land';
 	document.getElementById('noteWater').innerHTML = seaLevelData[level]['water']+'% Water';
+	return false;
 }
 
 function waitForImages() {

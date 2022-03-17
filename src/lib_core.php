@@ -110,7 +110,8 @@ function recursedir($BASEDIR, $type='')
                                 (int)$args[1], 
                                 $c, 
                                 $txt,
-                                "\n");
+                                "\n"
+                            );
                         }
                     }
                 }
